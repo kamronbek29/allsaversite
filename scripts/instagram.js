@@ -20,32 +20,12 @@ const createVideo = data => {
   downlaodbutton.href = data.content;
   downlaodbutton.text = "Download";
   downlaodbutton.target = "_blanc";
-  
-  let copy_button = document.createElement("button");
-  copy_button.text = "Copy";
-  // copy_button.setAttribute("onclick" , myFunction());
 
   render.innerHTML = ""; 
   render.appendChild(v);
   render.appendChild(info);
   render.appendChild(downlaodbutton);
-  render.appendChild(copy_button);
 };
-
-function myFunction() {
-  /* Get the text field */
-  var copyText = document.getElementById("direct_link");
-
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-
-  /* Copy the text inside the text field */
-  document.execCommand("copy");
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.src);
-}
 
 // create image
 const createImg = data => {
